@@ -1,4 +1,4 @@
-const createSlug = (name: string | null): string => {
+const createSlug = (name: string): string => {
     if (name) {
         const parsedName = name.replace(/\s/g, '').toLowerCase()
         return parsedName

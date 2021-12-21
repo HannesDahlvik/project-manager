@@ -51,7 +51,7 @@ const Signup: React.FC = () => {
 
                         if (data.user && data.token) {
                             setAuth(data.token, data.user)
-                            navigate(`/${data.user.username}/projects`)
+                            navigate(`/${data.user.slug}/projects`)
                             infoHandler(`Singed up as ${data.user.username}`)
                             return
                         }
@@ -89,7 +89,7 @@ const Signup: React.FC = () => {
                         }}
                         onClick={form.onSubmit(handleEmailLogin)}
                     >
-                        Submit
+                        Signup
                     </Button>
                     {emailLogin.error && <Text>Something went wrong! {emailLogin.error.message}</Text>}
                 </form>

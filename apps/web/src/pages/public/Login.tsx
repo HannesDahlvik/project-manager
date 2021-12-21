@@ -47,7 +47,7 @@ const Login: React.FC = () => {
 
                         if (data.user && data.token) {
                             setAuth(data.token, data.user)
-                            navigate(`/${data.user.username}/projects`)
+                            navigate(`/${data.user.slug}/projects`)
                             infoHandler(`Logged in as ${data.user.username}`)
                             return
                         }
@@ -81,7 +81,7 @@ const Login: React.FC = () => {
                         }}
                         onClick={form.onSubmit(handleEmailLogin)}
                     >
-                        Submit
+                        Login
                     </Button>
                     {emailLogin.error && <Text>Something went wrong! {emailLogin.error.message}</Text>}
                 </form>

@@ -4,16 +4,40 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 // UI
-import { Grid } from '@mantine/core'
+import { AppShell, createStyles } from '@mantine/core'
+
+// Components
+import ProfileNavbar from '../components/profile/ProfileNavbar'
 
 const ProfileLayout: React.FC = () => {
-    return (
-        <Grid>
-            <div>navbar</div>
+    const { classes } = useStyles()
 
+    return (
+        <AppShell
+            padding={0}
+            className={classes.wrapper}
+            header={<ProfileNavbar />}
+            styles={(theme) => ({
+                body: {
+                    height: '100%'
+                }
+            })}
+        >
             <Outlet />
-        </Grid>
+        </AppShell>
     )
 }
 
 export default ProfileLayout
+
+const useStyles = createStyles((theme) => {
+    const dark = theme.colorScheme === 'dark'
+    const colors = theme.colors
+
+    return {
+        wrapper: {
+            background: dark ? colors.dark[7] : '',
+            height: '100vh'
+        }
+    }
+})

@@ -52,7 +52,7 @@ const PublicNavbar: React.FC = () => {
                                 Logout
                             </Button>
 
-                            <Button onClick={() => navigate(`/${user.username}/projects`)}>Projects</Button>
+                            <Button onClick={() => navigate(`/${user.slug}/projects`)}>Projects</Button>
                         </>
                     )}
                 </Group>

@@ -60,7 +60,8 @@ const AppRoutes: React.FC = () => {
 
                             if (data.decoded) {
                                 setAuth(localStorage.token, data.decoded.user)
-                                // navigate(`/${data.decoded.user.username}/projects`)
+                                if (!location.pathname.includes(data.decoded.user.slug))
+                                    navigate(`/${data.decoded.user.slug}/projects`)
 
                                 const currentTime = Date.now() / 1000
                                 if (data.decoded.exp < currentTime) {
@@ -96,7 +97,7 @@ const AppRoutes: React.FC = () => {
             {user ? (
                 <>
                     <Route
-                        path={`/${user.username}`}
+                        path={`/${user.slug}`}
                         element={
                             <RequireAuth>
                                 <ProfileLayout />

@@ -2,7 +2,7 @@
 
 ### Apps and Packages
 
--   `server`: a [Express](https://expressjs.com/) with [TRPc](https://trpc.io/) server
+-   `server`: an [Express](https://expressjs.com/) server with [TRPc](https://trpc.io/) using MongoDB database
 -   `web`: a [React](https://reactjs.org/) app made with [Parcel](https://parceljs.org/)
 -   `config`: `eslint` configurations (`eslint-config-prettier`)
 -   `tsconfig`: `tsconfig.json`s used throughout the monorepo
