@@ -1,9 +1,5 @@
 # Project Manager
 
-## What's inside?
-
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
-
 ### Apps and Packages
 
 -   `server`: a [Express](https://expressjs.com/) with [TRPc](https://trpc.io/) server
